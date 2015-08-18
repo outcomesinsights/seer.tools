@@ -126,8 +126,8 @@ load_files <- function(fname = ".", setup_file) {
 setup_incidence <- function(inc_dir = "./data/raw/"){
     inc_path <- paste0(inc_dir, "SEER_1973_2012_TEXTDATA/incidence")
     f <- dir(inc_path, recursive = TRUE, include.dirs = FALSE, full.names = TRUE)
-    specsfile <- f[str_detect(f, "\\.sas$")] # get fixed width specs
-    datafiles <- f[str_detect(f, "\\.(txt|TXT)$")] # find data files
+    specsfile <- f[stringr::str_detect(f, "\\.sas$")] # get fixed width specs
+    datafiles <- f[stringr::str_detect(f, "\\.(txt|TXT)$")] # find data files
     specs <-    read_sas_specs(specsfile)
     coltype <-  ifelse(specs$char, "c",
                     ifelse(specs$num, "d", "i")) %>% paste0(., collapse = "") # one character per column for classes
