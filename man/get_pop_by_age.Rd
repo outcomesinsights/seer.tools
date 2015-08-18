@@ -2,10 +2,7 @@
 % Please edit documentation in R/age_dist.R
 \name{get_pop_by_age}
 \alias{get_pop_by_age}
-\title{Get Census Counts for Any Country
-Gets population counts by age for any country using a 2-letter country code, as provided
-by the US Census international data.
-Derived from original code at https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/pyramids/rcharts_pyramids.R}
+\title{Get Census Counts for Any Country}
 \usage{
 get_pop_by_age(countries, years, ages = 15, agg = "aggregate",
   rvalue = -1L)
@@ -25,9 +22,10 @@ get_pop_by_age(countries, years, ages = 15, agg = "aggregate",
 Results in a dataframe with one row per age. Note that even with 1 year ages, 85 is 85-89, 90 is 90-94, 95 is 95-99, and 100 is 100 and older.
 }
 \description{
-Get Census Counts for Any Country
 Gets population counts by age for any country using a 2-letter country code, as provided
 by the US Census international data.
+}
+\details{
 Derived from original code at https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/pyramids/rcharts_pyramids.R
 }
 \examples{

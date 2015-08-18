@@ -2,8 +2,7 @@
 % Please edit documentation in R/load_data.R
 \name{gen_pop_specs}
 \alias{gen_pop_specs}
-\title{Load Population (Denominator) Data
-Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2012_TEXTDATA/populations/popdic.html")}
+\title{Load Population (Denominator) Data}
 \usage{
 gen_pop_specs()
 }
@@ -11,7 +10,6 @@ gen_pop_specs()
 Returns a list of specifications:  input_specs and col_type to use to read in the fixed width file population data.  Need to access each item in list separately for read_fwf() function.
 }
 \description{
-Load Population (Denominator) Data
-Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2012_TEXTDATA/populations/popdic.html")
+Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2012_TEXTDATA/populations/popdic.html").
 }
 

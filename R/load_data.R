@@ -1,4 +1,5 @@
 #' Read SAS input statement
+#'
 #' This function reads the SEER SAS input statements file to create fwf input specs.
 #'
 #' @param textdoc The text document to be read in.  Must be of a very specific format.
@@ -26,7 +27,8 @@ read_sas_specs <- function(textdoc, ...) {
     return(specs)
 }
 
-#' Gets the current SEER download URL.
+#' Gets the current SEER download URL
+#'
 #' Gets URL for download file (zip file) for use with curl_download.  Loaded from the SEER webpage.
 #'
 #' @return Returns a URL
@@ -40,15 +42,16 @@ read_sas_specs <- function(textdoc, ...) {
 }
 
 #' Download SEER data
-#' Function to download and unzip latest seer file
+#'
+#' Function to download and unzip latest seer file.
 #'
 #' @param user This is your username for the most current SEER data
-#' @param pass This is your password for the most current SEER data
+#' @param pw This is your password for the most current SEER data
 #' @param data_dir This is the data directory in which the unzipped data will be saved.
 #' The zipped file will be downloaded to a temporary file location.
 #' @return This function results in a saved file at the location in data_dir.
 #' @examples
-#' \dontrun {
+#' \dontrun{
 #' # Set up download details and then download file from internet and unzip it to data_dir
 #' # note file is over 300 MB and takes about 5 min to download
 #' user <- "uuuuu-Nov2014"
@@ -71,8 +74,9 @@ download_seer <- function(user, pw, data_dir) {
 }
 
 #' Load SEER files
-#' This function gets files by name and binds them into a data.frame
-#' Selects the datafile names to select the files to merge using a logical vector to select files.  Data files are "BREAST", "COLRECT", "DIGOTHR", "FEMGEN", "LYMYLEUK", "MALEGEN", "RESPIR", "URINARY", and "OTHER" (names do NOT have to be in caps)
+#'
+#' This function gets files by name and binds them into a data.frame.
+#' Selects the datafile names to select the files to merge using a logical vector to select files.  Data files are "BREAST", "COLRECT", "DIGOTHR", "FEMGEN", "LYMYLEUK", "MALEGEN", "RESPIR", "URINARY", and "OTHER" (names do NOT have to be in caps).
 #'
 #' @param fname Name of the SEER file to retrieve.  Uses grepl on a list of the SEER filenames so the string can be written flexibly.
 #' @param vec_of_files Vector of filenames to search through.  Usually provided by listing filenames ending in .txt in SEER data directory.
@@ -104,6 +108,7 @@ load_files <- function(fname = ".", vec_of_files) {
 }
 
 #' Setup to Load Fixed-width Incidence Files
+#'
 #' Reads in file specs and sets up information to load desired incidence files.
 #'
 #' @param inc_dir Directory on user's system that contains the incidence data.  Defaults to current year (2015 release of 2012 data)
@@ -131,7 +136,8 @@ setup_incidence <- function(inc_dir = "./data/raw/"){
 
 
 #' Load Population (Denominator) Data
-#' Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2012_TEXTDATA/populations/popdic.html")
+#'
+#' Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2012_TEXTDATA/populations/popdic.html").
 #'
 #' @return Returns a list of specifications:  input_specs and col_type to use to read in the fixed width file population data.  Need to access each item in list separately for read_fwf() function.
 #' @export

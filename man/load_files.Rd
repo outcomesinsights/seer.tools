@@ -2,9 +2,7 @@
 % Please edit documentation in R/load_data.R
 \name{load_files}
 \alias{load_files}
-\title{Load SEER files
-This function gets files by name and binds them into a data.frame
-Selects the datafile names to select the files to merge using a logical vector to select files.  Data files are "BREAST", "COLRECT", "DIGOTHR", "FEMGEN", "LYMYLEUK", "MALEGEN", "RESPIR", "URINARY", and "OTHER" (names do NOT have to be in caps)}
+\title{Load SEER files}
 \usage{
 load_files(fname = ".", vec_of_files)
 }
@@ -17,9 +15,8 @@ load_files(fname = ".", vec_of_files)
 This function returns a dataframe of the files across SEER years.
 }
 \description{
-Load SEER files
-This function gets files by name and binds them into a data.frame
-Selects the datafile names to select the files to merge using a logical vector to select files.  Data files are "BREAST", "COLRECT", "DIGOTHR", "FEMGEN", "LYMYLEUK", "MALEGEN", "RESPIR", "URINARY", and "OTHER" (names do NOT have to be in caps)
+This function gets files by name and binds them into a data.frame.
+Selects the datafile names to select the files to merge using a logical vector to select files.  Data files are "BREAST", "COLRECT", "DIGOTHR", "FEMGEN", "LYMYLEUK", "MALEGEN", "RESPIR", "URINARY", and "OTHER" (names do NOT have to be in caps).
 }
 \examples{
 \dontrun{

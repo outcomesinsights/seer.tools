@@ -2,8 +2,7 @@
 % Please edit documentation in R/load_data.R
 \name{setup_incidence}
 \alias{setup_incidence}
-\title{Setup to Load Fixed-width Incidence Files
-Reads in file specs and sets up information to load desired incidence files.}
+\title{Setup to Load Fixed-width Incidence Files}
 \usage{
 setup_incidence(inc_dir = "./data/raw/")
 }
@@ -14,7 +13,6 @@ setup_incidence(inc_dir = "./data/raw/")
 xxx
 }
 \description{
-Setup to Load Fixed-width Incidence Files
 Reads in file specs and sets up information to load desired incidence files.
 }
 \examples{

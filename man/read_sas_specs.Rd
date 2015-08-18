@@ -2,8 +2,7 @@
 % Please edit documentation in R/load_data.R
 \name{read_sas_specs}
 \alias{read_sas_specs}
-\title{Read SAS input statement
-This function reads the SEER SAS input statements file to create fwf input specs.}
+\title{Read SAS input statement}
 \usage{
 read_sas_specs(textdoc, ...)
 }
@@ -16,7 +15,6 @@ read_sas_specs(textdoc, ...)
 Returns specifications from SAS input statements that can be used by R
 }
 \description{
-Read SAS input statement
 This function reads the SEER SAS input statements file to create fwf input specs.
 }
 

@@ -1,6 +1,8 @@
 #' Get Census Counts for Any Country
+#'
 #' Gets population counts by age for any country using a 2-letter country code, as provided
 #' by the US Census international data.
+#'
 #' Derived from original code at https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/pyramids/rcharts_pyramids.R
 # United States is code "US".  Use countrycode package and use FIPS 10-4 (two letter) code
 #` from ISO short country name list for other countries

@@ -2,28 +2,26 @@
 % Please edit documentation in R/load_data.R
 \name{download_seer}
 \alias{download_seer}
-\title{Download SEER data
-Function to download and unzip latest seer file}
+\title{Download SEER data}
 \usage{
 download_seer(user, pw, data_dir)
 }
 \arguments{
 \item{user}{This is your username for the most current SEER data}
 
+\item{pw}{This is your password for the most current SEER data}
+
 \item{data_dir}{This is the data directory in which the unzipped data will be saved.
 The zipped file will be downloaded to a temporary file location.}
-
-\item{pass}{This is your password for the most current SEER data}
 }
 \value{
 This function results in a saved file at the location in data_dir.
 }
 \description{
-Download SEER data
-Function to download and unzip latest seer file
+Function to download and unzip latest seer file.
 }
 \examples{
-\dontrun {
+\dontrun{
 # Set up download details and then download file from internet and unzip it to data_dir
 # note file is over 300 MB and takes about 5 min to download
 user <- "uuuuu-Nov2014"
