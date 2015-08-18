@@ -13,14 +13,14 @@ setup_incidence(inc_dir = "./data/raw/")
 xxx
 }
 \description{
-Reads in file specs and sets up information to load desired incidence files.
+Reads in file specs and sets up information to load desired incidence files.  These files come in groups, and specific tumors are within the groups.
 }
 \examples{
 \dontrun{
 # simple script read in files with types using above inputs
 # remove col_types to have it choose types automatically
 s <- setup_incidence()
-seer <- load_files("LYMYLEUK", s$datafiles)
+seer <- load_files("LYMYLEUK", s)
 }
 }
 
