@@ -5,7 +5,9 @@ Version: 0.1
 Date: 2015-08-17
 Author: Mark Danese
 Maintainer: Mark Danese <mark@outins.com>
-Description: This is a package that will download the password protected SEER oncology data from the National Cancer Institute (NCI).  The file is zipped, and the zip file contains fixed width files containing the data.  There are tools to unzip and read the files into memory, allowing the user to save them.
+Description: This is a package that will download the password protected SEER oncology data from the National Cancer Institute (NCI).
+    The file is zipped, and the zip file contains fixed width files containing the data.
+    There are tools to unzip and read the files into memory, allowing the user to save them.
 License: MIT + file LICENSE
 LazyData: TRUE
 Imports:
