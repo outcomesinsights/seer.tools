@@ -114,7 +114,7 @@ load_files <- function(group = "", setup_file) {
 #' Reads in file specs and sets up information to load desired incidence files.  These files come in groups, and specific tumors are within the groups.
 #'
 #' @param inc_dir Directory on user's system that contains the incidence data.
-#' @param yr Year of release.  Defaults to 2013 (2016 release).
+#' @param yr Year of release.  Defaults to 2013 (2016 release).  Note that incidence function is for 2013 only.
 #' @return xxx
 #' @examples
 #' \dontrun{
@@ -140,12 +140,12 @@ setup_incidence <- function(inc_dir = "./data/raw/", yr = 2013){
 
 #' Load Population (Denominator) Data
 #'
-#' Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2012_TEXTDATA/populations/popdic.html").
+#' Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2013_TEXTDATA/populations/popdic.html").  Note that this does not support 2012 and earlier files yet.  Need to use file on system for this.
 #'
 #' @return Returns a list of specifications:  input_specs and col_type to use to read in the fixed width file population data.  Need to access each item in list separately for read_fwf() function.
 #' @export
 gen_pop_specs <- function(){
-    pop_specs <- html("http://seer.cancer.gov/manuals/Text.Data.popdic.html") %>%
+    pop_specs <- rvest::html("http://seer.cancer.gov/manuals/Text.Data.popdic.html") %>%
         rvest::html_table() %>%
         do.call(rbind, .)
     names(pop_specs) <- c("varname", "colstart", "widths", "type")
