@@ -113,7 +113,8 @@ load_files <- function(group = "", setup_file) {
 #'
 #' Reads in file specs and sets up information to load desired incidence files.  These files come in groups, and specific tumors are within the groups.
 #'
-#' @param inc_dir Directory on user's system that contains the incidence data.  Defaults to current year (2015 release of 2012 data)
+#' @param inc_dir Directory on user's system that contains the incidence data.
+#' @param yr Year of release.  Defaults to 2013 (2016 release).
 #' @return xxx
 #' @examples
 #' \dontrun{
@@ -123,8 +124,8 @@ load_files <- function(group = "", setup_file) {
 #' seer <- load_files("LYMYLEUK", s)
 #' }
 #' @export
-setup_incidence <- function(inc_dir = "./data/raw/"){
-    inc_path <- paste0(inc_dir, "SEER_1973_2012_TEXTDATA/incidence")
+setup_incidence <- function(inc_dir = "./data/raw/", yr = 2013){
+    inc_path <- paste0(inc_dir, "SEER_1973_", yr, "_TEXTDATA/incidence")
     f <- dir(inc_path, recursive = TRUE, include.dirs = FALSE, full.names = TRUE)
     specsfile <- f[stringr::str_detect(f, "\\.sas$")] # get fixed width specs
     datafiles <- f[stringr::str_detect(f, "\\.(txt|TXT)$")] # find data files
