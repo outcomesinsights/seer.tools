@@ -12,7 +12,7 @@ read_sas_specs <- function(textdoc, ...) {
     colstart <- stringr::str_extract(z, "@\\s*\\d+\\s+") %>%
         gsub("@", "", .) %>%
         as.numeric
-    varname <- stringr::str_extract(z, "[A-Z]+\\d*\\S*") %>% # caps + maybe a number + maybe any non-whitespace char
+    varname <- stringr::str_extract(z, "[:Alpha:]+\\d*\\S*") %>% # caps + maybe a number + maybe any non-whitespace char
         tolower
     char <- stringr::str_detect(z, "\\$(CHAR|char)?\\d+")
     num <- stringr::str_detect(z, "\\s+\\d+\\.\\d+\\s+") # spaces followed by number followed by . followed by number followed by spaces
