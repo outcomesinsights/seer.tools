@@ -12,4 +12,3 @@ Returns a list of specifications:  input_specs and col_type to use to read in th
 \description{
 Loads the population files for denominators based on web version of (could also use file on system at "./data/raw/SEER_1973_2013_TEXTDATA/populations/popdic.html").  Note that this does not support 2012 and earlier files yet.  Need to use file on system for this.
 }
-

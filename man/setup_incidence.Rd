@@ -25,4 +25,3 @@ s <- setup_incidence()
 seer <- load_files("LYMYLEUK", s)
 }
 }
-

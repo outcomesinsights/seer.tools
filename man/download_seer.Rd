@@ -30,4 +30,3 @@ data_dir <- "./data/"
 download_seer(user, pw, data_dir)
 }
 }
-

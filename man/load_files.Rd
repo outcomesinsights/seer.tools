@@ -34,4 +34,3 @@ setkey(aml, casenum)
 aml <- unique(aml) # removes duplicate aml records (only taking first of each)
 }
 }
-

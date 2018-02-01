@@ -4,7 +4,7 @@
 \alias{get_pop_by_age}
 \title{Get Census Counts for Any Country}
 \usage{
-get_pop_by_age(countries, years, ages = 15, agg = "aggregate",
+get_pop_by_age(countries, years, ages = 15, agg = "separate",
   rvalue = -1L)
 }
 \arguments{
@@ -14,7 +14,7 @@ get_pop_by_age(countries, years, ages = 15, agg = "aggregate",
 
 \item{ages}{is set at 10 for 5 year age groups and 15 for 1 year age groups (default)}
 
-\item{agg}{This defaults to "aggregate" at the moment (other option is "separate").}
+\item{agg}{This defaults to "separate" at the moment (other option is "aggregate").}
 
 \item{rvalue}{R = 1 or -1 (Need to check this one for what it does.  Set at -1 for now.)}
 }
@@ -23,15 +23,14 @@ Results in a dataframe with one row per age. Note that even with 1 year ages, 85
 }
 \description{
 Gets population counts by age for any country using a 2-letter country code, as provided
-by the US Census international data.
+by the US Census international data.  Updated in 2018 to handle https and URL change.
 }
 \details{
 Derived from original code at https://raw.githubusercontent.com/walkerke/teaching-with-datavis/master/pyramids/rcharts_pyramids.R
 }
 \examples{
 \dontrun{
-pop1 <- get_pop_by_age("US", 2015)
-saveRDS(pop1, "./data/analysis/us_2015_1yr.rds")
+pop1 <- get_pop_by_age("US", 2017)
+saveRDS(pop1, "./data/analysis/us_2017_1yr.rds")
 }
 }
-

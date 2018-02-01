@@ -17,4 +17,3 @@ Returns specifications from SAS input statements that can be used by R
 \description{
 This function reads the SEER SAS input statements file to create fwf input specs.
 }
-
